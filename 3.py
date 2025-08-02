@@ -1,17 +1,16 @@
-# Иногда мне нужно быстро перевести мили на имперский галлон ( mpg) в километры на литр ( kpl).
-#
-# Создайте приложение, которое будет отображать количество километров на литр (выходные данные)
-# на основе количества миль на имперский галлон (входные данные).
-#
-# Обязательно округлите результат до двух знаков после запятой.
-#
-# Некоторые полезные ассоциации, имеющие отношение к этому ката:
-#
-# 1 имперский галлон = 4,54609188 литра
-# 1 миля = 1,609344 километра
-#
-def converter(mpg):
-    return round(mpg * 1.609344 / 4.54609188, 2)
+# Есть массив строк. Все строки содержат одинаковые буквы , кроме одной. Попробуйте найти её!
+
+from collections import Counter
 
 
-print(converter(10))
+def find_uniq(arr):
+    def norm(s):
+        return ''.join(sorted(set(s.replace(' ', '').lower())))
+
+    normalized = list(map(norm, arr))
+    freq = Counter(normalized)
+    unique_key = next(k for k, v in freq.items() if v == 1)
+    return arr[normalized.index(unique_key)]
+
+
+print(find_uniq(['Aa', 'aaa', 'aaaaa', 'BbBb', 'Aaaa', 'AaAaAa', 'a']))
