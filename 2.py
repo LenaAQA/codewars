@@ -1,19 +1,16 @@
-# напишите мне функцию stringy, которая принимает a size и возвращает a string чередующихся 1s и 0s.
-# строка должна начинаться с 1.
-# строка с size6 должна вернуть: '101010'.
-# с size4 должно вернуть: '1010'.
-# с size12 должно вернуть: '101010101010'.
-# Размер всегда будет положительным и будет использовать только целые числа.
-#
-def stringy(size):
-    res = ""
-    for i in range(size):
-        if i % 2 == 0:
-            res += str(1)
-        else:
-            res += str(0)
-    return res
+# Есть массив с несколькими числами. Все числа равны, кроме одного. Попробуйте найти его!
 
 
-print(stringy(5))
+# def find_uniq(arr):
+#     arr = sorted(arr)
+#     if arr[0] == arr[1]:
+#         return arr[-1]
+#     else:
+#         return arr[0]
 
+def find_uniq(arr):
+    arr = sorted(arr)
+    return arr[-1] if arr[0] == arr[1] else arr[0]
+
+
+print(find_uniq([1, 1, 1, 2, 1, 1]))
