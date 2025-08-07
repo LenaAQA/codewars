@@ -1,1 +1,1 @@
-<h2 align="center"><strong>Решённые задачи на codewars.com</strong></h2>
+<h1 align="center"><strong>Решённые задачи на codewars.com</strong></h1>
