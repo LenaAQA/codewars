@@ -1,0 +1,10 @@
+"""
+Link: https://www.codewars.com/kata/56d19b2ac05aed1a20000430
+"""
+
+
+def between_extremes(numbers):
+    return max(numbers) - min(numbers)
+
+
+print(between_extremes([1, 1]))
