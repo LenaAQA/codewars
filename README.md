@@ -1,1 +1,1 @@
-codewars
+Решённые задачи на codewars.com
